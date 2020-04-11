@@ -11,7 +11,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DeleteOutline from '@material-ui/icons/DeleteOutline';
 
 import { connect } from 'react-redux';
-import { deleteScream } from '../../redux/actions/dataActions';
+import { deletePost } from '../../redux/actions/dataActions';
 
 const styles = {
   deleteButton: {
@@ -21,7 +21,7 @@ const styles = {
   }
 };
 
-class DeleteScream extends Component {
+class DeletePost extends Component {
   state = {
     open: false
   };
@@ -31,8 +31,8 @@ class DeleteScream extends Component {
   handleClose = () => {
     this.setState({ open: false });
   };
-  deleteScream = () => {
-    this.props.deleteScream(this.props.screamId);
+  deletePost = () => {
+    this.props.deletePost(this.props.postId);
     this.setState({ open: false });
   };
   render() {
@@ -41,7 +41,7 @@ class DeleteScream extends Component {
     return (
       <Fragment>
         <MyButton
-          tip="Delete Scream"
+          tip="Delete Post"
           onClick={this.handleOpen}
           btnClassName={classes.deleteButton}
         >
@@ -54,13 +54,13 @@ class DeleteScream extends Component {
           maxWidth="sm"
         >
           <DialogTitle>
-            Are you sure you want to delete this scream ?
+            Are you sure you want to delete this post ?
           </DialogTitle>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.deleteScream} color="secondary">
+            <Button onClick={this.deletePost} color="secondary">
               Delete
             </Button>
           </DialogActions>
@@ -70,13 +70,13 @@ class DeleteScream extends Component {
   }
 }
 
-DeleteScream.propTypes = {
-  deleteScream: PropTypes.func.isRequired,
+DeletePost.propTypes = {
+  deletePost: PropTypes.func.isRequired,
   classes: PropTypes.object.isRequired,
-  screamId: PropTypes.string.isRequired
+  postId: PropTypes.string.isRequired
 };
 
 export default connect(
   null,
-  { deleteScream }
-)(withStyles(styles)(DeleteScream));
+  { deletePost }
+)(withStyles(styles)(DeletePost));

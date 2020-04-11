@@ -7,24 +7,24 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 // REdux
 import { connect } from 'react-redux';
-import { likeScream, unlikeScream } from '../../redux/actions/dataActions';
+import { likePost, unlikePost } from '../../redux/actions/dataActions';
 
 export class LikeButton extends Component {
-  likedScream = () => {
+  likedPost = () => {
     if (
       this.props.user.likes &&
       this.props.user.likes.find(
-        (like) => like.screamId === this.props.screamId
+        (like) => like.postId === this.props.postId
       )
     )
       return true;
     else return false;
   };
-  likeScream = () => {
-    this.props.likeScream(this.props.screamId);
+  likePost = () => {
+    this.props.likePost(this.props.postId);
   };
-  unlikeScream = () => {
-    this.props.unlikeScream(this.props.screamId);
+  unlikePost = () => {
+    this.props.unlikePost(this.props.postId);
   };
   render() {
     const { authenticated } = this.props.user;
@@ -34,12 +34,12 @@ export class LikeButton extends Component {
           <FavoriteBorder color="primary" />
         </MyButton>
       </Link>
-    ) : this.likedScream() ? (
-      <MyButton tip="Undo like" onClick={this.unlikeScream}>
+    ) : this.likedPost() ? (
+      <MyButton tip="Undo like" onClick={this.unlikePost}>
         <FavoriteIcon color="primary" />
       </MyButton>
     ) : (
-      <MyButton tip="Like" onClick={this.likeScream}>
+      <MyButton tip="Like" onClick={this.likePost}>
         <FavoriteBorder color="primary" />
       </MyButton>
     );
@@ -49,9 +49,9 @@ export class LikeButton extends Component {
 
 LikeButton.propTypes = {
   user: PropTypes.object.isRequired,
-  screamId: PropTypes.string.isRequired,
-  likeScream: PropTypes.func.isRequired,
-  unlikeScream: PropTypes.func.isRequired
+  postId: PropTypes.string.isRequired,
+  likePost: PropTypes.func.isRequired,
+  unlikePost: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => ({
@@ -59,8 +59,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapActionsToProps = {
-  likeScream,
-  unlikeScream
+  likePost,
+  unlikePost
 };
 
 export default connect(
