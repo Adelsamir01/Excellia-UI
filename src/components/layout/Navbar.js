@@ -16,7 +16,7 @@ class Navbar extends Component {
   render() {
     const { authenticated } = this.props;
     return (
-      <AppBar style={{backgroundColor: 'red'}}>
+      <AppBar style={{backgroundColor: '#b92b27'}}>
         <Toolbar className="nav-container">
           {authenticated ? (
             <Fragment>

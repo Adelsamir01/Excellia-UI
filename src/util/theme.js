@@ -1,7 +1,7 @@
 export default {
   palette: {
     primary: {
-      light: 'red',
+      light: '#b92b27',
       main: '#CD0909',
       dark: '#E36411',
       contrastText: '#fff'
@@ -33,7 +33,7 @@ export default {
     position: 'relative'
   },
   customError: {
-    color: 'red',
+    color: '#b92b27',
     fontSize: '0.8rem',
     marginTop: 10
   },
