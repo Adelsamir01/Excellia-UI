@@ -18,6 +18,7 @@ import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
 import user from './pages/user';
+import course from './pages/course';
 
 import axios from 'axios';
 
@@ -56,6 +57,12 @@ class App extends Component {
                   exact
                   path="/users/:handle/post/:postId"
                   component={user}
+                />
+                <Route exact path="/courses/:handle" component={course} />
+                <Route
+                  exact
+                  path="/courses/:handle/post/:postId"
+                  component={course}
                 />
               </Switch>
             </div>
