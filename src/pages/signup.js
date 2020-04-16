@@ -63,7 +63,7 @@ class signup extends Component {
       <Grid container className={classes.form}>
         <Grid item sm />
         <Grid item sm>
-          <img src={AppIcon} alt="monkey" className={classes.image} />
+          <img src={AppIcon} alt="Excellia" className={classes.image} />
           <Typography variant="h2" className={classes.pageTitle}>
             SignUp
           </Typography>
@@ -108,7 +108,7 @@ class signup extends Component {
               id="handle"
               name="handle"
               type="text"
-              label="Handle"
+              label="Username"
               className={classes.textField}
               helperText={errors.handle}
               error={errors.handle ? true : false}
