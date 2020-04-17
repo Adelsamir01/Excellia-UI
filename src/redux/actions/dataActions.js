@@ -132,10 +132,10 @@ export const getUserData = (userHandle) => (dispatch) => {
       });
     });
 };
-export const getCourseData = (userHandle) => (dispatch) => {
+export const getCourseData = (coursehandle) => (dispatch) => {
   dispatch({ type: LOADING_DATA });
   axios
-    .get(`/user/${userHandle}`)
+    .get(`/courses/${coursehandle}`)
     .then((res) => {
       dispatch({
         type: SET_POSTS,

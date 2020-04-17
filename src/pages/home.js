@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import Post from '../components/post/Post';
 import Profile from '../components/profile/Profile';
+import Course from '../components/course/Profile';
 import PostSkeleton from '../util/PostSkeleton';
 
 import { connect } from 'react-redux';
@@ -26,7 +27,8 @@ class home extends Component {
           {recentPostsMarkup}
         </Grid>
         <Grid item sm={4} xs={12}>
-          <Profile />
+          <Course />
+          <Profile/>
         </Grid>
       </Grid>
     );
