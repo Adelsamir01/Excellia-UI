@@ -19,6 +19,8 @@ import login from './pages/login';
 import signup from './pages/signup';
 import user from './pages/user';
 import course from './pages/course';
+import bethetutor from './pages/bethetutor';
+
 
 import axios from 'axios';
 
@@ -51,6 +53,7 @@ class App extends Component {
             <div className="container">
               <Switch>
                 <Route exact path="/" component={home} />
+                <Route exact path="/bethetutor" component={bethetutor}  />
                 <AuthRoute exact path="/login" component={login} />
                 <AuthRoute exact path="/signup" component={signup} />
                 <Route exact path="/users/:handle" component={user} />
