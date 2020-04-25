@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
-import EditDetails from './EditDetails';
+//import EditDetails from './EditDetails';
 import MyButton from '../../util/MyButton';
 import ProfileSkeleton from '../../util/ProfileSkeleton';
 // MUI stuff
@@ -16,36 +16,22 @@ import LocationOn from '@material-ui/icons/LocationOn';
 import LinkIcon from '@material-ui/icons/Link';
 import CalendarToday from '@material-ui/icons/CalendarToday';
 import EditIcon from '@material-ui/icons/Edit';
-import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
+//import KeyboardReturn from '@material-ui/icons/KeyboardReturn';
 //Redux
 import { connect } from 'react-redux';
-import { logoutUser, uploadImage } from '../../redux/actions/userActions';
+//import { logoutUser, uploadImage } from '../../redux/actions/userActions';
 
 const styles = (theme) => ({
   ...theme
 });
 
-class Profile extends Component {
-  handleImageChange = (event) => {
-    const image = event.target.files[0];
-    const formData = new FormData();
-    formData.append('image', image, image.name);
-    this.props.uploadImage(formData);
-  };
-  handleEditPicture = () => {
-    const fileInput = document.getElementById('imageInput');
-    fileInput.click();
-  };
-  handleLogout = () => {
-    this.props.logoutUser();
-  };
+class Course extends Component {
   render() {
     const {
       classes,
-      course: {
-        credentials: { handle, createdAt, imageUrl, bio, website, location },
+      course: { handle, createdAt, imageUrl, bio, website, location },
         loading,
-      }
+      
     } = this.props;
 
     let profileMarkup = !loading ? (
@@ -102,8 +88,8 @@ class Profile extends Component {
             </div>
            {/*  <MyButton tip="Logout" onClick={this.handleLogout}>
               <KeyboardReturn color="primary" />
-            </MyButton> */}
-            <EditDetails />
+            </MyButton> 
+        /*    <EditDetails />*/}
           </div>
         </Paper>
       ) , (
@@ -143,9 +129,7 @@ const mapStateToProps = (state) => ({
   courses: state.course
 });
 
-const mapActionsToProps = { logoutUser, uploadImage };
-
-Profile.propTypes = {
+Course.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   uploadImage: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
@@ -154,5 +138,4 @@ Profile.propTypes = {
 
 export default connect(
   mapStateToProps,
-  mapActionsToProps
-)(withStyles(styles)(Profile));
+)(withStyles(styles)(Course));

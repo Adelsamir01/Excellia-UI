@@ -16,7 +16,7 @@ const styles = (theme) => ({
   ...theme
 });
 
-const StaticProfile = (props) => {
+const CStaticProfile = (props) => {
   const {
     classes,
     profile: { handle, createdAt, imageUrl, bio, website, location }
@@ -65,9 +65,9 @@ const StaticProfile = (props) => {
   );
 };
 
-StaticProfile.propTypes = {
+CStaticProfile.propTypes = {
   profile: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(StaticProfile);
+export default withStyles(styles)(CStaticProfile);

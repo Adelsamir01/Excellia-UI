@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Post from '../components/post/Post';
-import StaticProfile from '../components/course/StaticProfile';
+import CStaticProfile from '../components/course/CStaticProfile';
 import Grid from '@material-ui/core/Grid';
 
 import PostSkeleton from '../util/PostSkeleton';
@@ -59,7 +59,7 @@ class course extends Component {
           {this.state.profile === null ? (
             <ProfileSkeleton />
           ) : (
-            <StaticProfile profile={this.state.profile} />
+            <CStaticProfile profile={this.state.profile} />
           )}
         </Grid>
       </Grid>
