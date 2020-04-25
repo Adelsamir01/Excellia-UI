@@ -28,7 +28,7 @@ class Navbar extends Component {
               </Link>
               <Notifications />
               <Link to ="/bethetutor">
-              <Button color="white" component="span" href="#contained-buttons">TUTOR ?</Button>
+              <Button color="white" component="span" href="#contained-buttons">TUTOR?</Button>
               </Link>
             </Fragment>
           ) : (
