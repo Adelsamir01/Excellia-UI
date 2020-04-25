@@ -27,6 +27,9 @@ class Navbar extends Component {
                 </MyButton>
               </Link>
               <Notifications />
+              <Link to ="/bethetutor">
+              <Button color="white" component="span" href="#contained-buttons">TUTOR ?</Button>
+              </Link>
             </Fragment>
           ) : (
             <Fragment>
