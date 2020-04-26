@@ -19,7 +19,7 @@ const panes = [
     render: () => <Embed
     id='/'
     placeholder='/icon.png'
-    url='/users/DOLA    '
+    url='/users/MATH-101    '
   />,
   },
   {
