@@ -97,8 +97,8 @@ class EditDetails extends Component {
               <TextField
                 name="website"
                 tpye="text"
-                label="Website"
-                placeholder="Your personal/professinal website"
+                label="Facebook Profile"
+                placeholder="Enter your Facebook Profile Link"
                 className={classes.textField}
                 value={this.state.website}
                 onChange={this.handleChange}
