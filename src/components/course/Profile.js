@@ -69,7 +69,7 @@ class Course extends Component {
               <hr />
               {location && (
                 <Fragment>
-                  <LocationOn color="primary" /> <span>{location}</span>
+                  <LocationOn color="primary" /> <span>Nile University</span>
                   <hr />
                 </Fragment>
               )}

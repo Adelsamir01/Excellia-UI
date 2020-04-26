@@ -24,14 +24,14 @@ const styles = (theme) => ({
 
 class EditDetails extends Component {
   state = {
-    bio: '',
+   
     website: '',
     location: '',
     open: false
   };
   mapUserDetailsToState = (credentials) => {
     this.setState({
-      bio: credentials.bio ? credentials.bio : '',
+     
       website: credentials.website ? credentials.website : '',
       location: credentials.location ? credentials.location : ''
     });
@@ -55,7 +55,7 @@ class EditDetails extends Component {
   };
   handleSubmit = () => {
     const userDetails = {
-      bio: this.state.bio,
+ 
       website: this.state.website,
       location: this.state.location
     };
@@ -82,7 +82,7 @@ class EditDetails extends Component {
           <DialogTitle>Edit your details</DialogTitle>
           <DialogContent>
             <form>
-              <TextField
+     {/*          <TextField
                 name="bio"
                 tpye="text"
                 label="Bio"
@@ -93,7 +93,7 @@ class EditDetails extends Component {
                 value={this.state.bio}
                 onChange={this.handleChange}
                 fullWidth
-              />
+              /> */}
               <TextField
                 name="website"
                 tpye="text"
@@ -104,7 +104,7 @@ class EditDetails extends Component {
                 onChange={this.handleChange}
                 fullWidth
               />
-              <TextField
+             {/*  <TextField
                 name="location"
                 tpye="text"
                 label="Location"
@@ -113,7 +113,7 @@ class EditDetails extends Component {
                 value={this.state.location}
                 onChange={this.handleChange}
                 fullWidth
-              />
+              /> */}
             </form>
           </DialogContent>
           <DialogActions>
