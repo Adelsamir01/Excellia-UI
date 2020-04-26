@@ -28,10 +28,10 @@ class Navbar extends Component {
               </Link>
               <Notifications />
 			  <Button color="inherit" component={Link} to="/bethetutor">
-			  NEED HELP ?
+			  NEED HELP?
               </Button>
 			  <Button color="inherit" component={Link} to="/bethetutor">
-			  TUTOR ?
+			  TUTOR?
               </Button>
 			 
             </Fragment>
