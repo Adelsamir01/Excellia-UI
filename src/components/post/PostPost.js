@@ -92,7 +92,7 @@ class PostPost extends Component {
               <TextField
                 name="body"
                 type="text"
-                label="POST!!"
+                label="This post will be visable to all Excellia users."
                 multiline
                 rows="3"
                 placeholder="Share with your friends!"

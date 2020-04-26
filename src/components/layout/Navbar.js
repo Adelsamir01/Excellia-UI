@@ -36,7 +36,7 @@ class Navbar extends Component {
 			  NEED HELP ?
               </Button>
 			  <Button color="inherit" component={Link} to="/bethetutor">
-			  TUTOR ?
+			  TUTOR?
               </Button>
       /*   <Button color="inherit" component={Link} to="/courses">
 			  Our Courses
