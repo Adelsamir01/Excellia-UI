@@ -11,7 +11,7 @@ export class helpme extends Component {
                 
                 <iframe title="Excelsheet" src="https://docs.google.com/spreadsheets/d/1RgFmQhMMaBBzC_4463myG2ZvLXrsJKi7bFmEMcTER7c/edit?hl=en&widget=false&hl=en&ui=2&chrome=false&rm=minimal#gid=733055832"
                 frameBorder="0" 
-                style = {{width : "1200px", height: "2000px", frameBorder:0 ,marginheight:"0" ,marginwidth:"0"}}><Button component={Link} to="/login"></Button></iframe>
+                style = {{width : "1250px", height: "500px", frameBorder:0 ,marginheight:"0" ,marginwidth:"0"}}><Button component={Link} to="/login"></Button></iframe>
 
                 </div>
         );
