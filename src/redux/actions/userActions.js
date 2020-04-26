@@ -66,7 +66,7 @@ export const getUserData = () => (dispatch) => {
 export const getCourseData = () => (dispatch) => {
   dispatch({ type: LOADING_USER });
   axios
-    .get('/course')
+    .get('/user')
     .then((res) => {
       dispatch({
         type: SET_USER,

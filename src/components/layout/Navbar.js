@@ -27,9 +27,13 @@ class Navbar extends Component {
                 </MyButton>
               </Link>
               <Notifications />
-              <Link to ="/bethetutor">
-              <Button color="white" component="span" href="#contained-buttons">TUTOR ?</Button>
-              </Link>
+			  <Button color="inherit" component={Link} to="/bethetutor">
+			  NEED HELP ?
+              </Button>
+			  <Button color="inherit" component={Link} to="/bethetutor">
+			  TUTOR ?
+              </Button>
+			 
             </Fragment>
           ) : (
             <Fragment>
