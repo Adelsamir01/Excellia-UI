@@ -4,12 +4,12 @@ import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 
-export class bethetutor extends Component {
+export class helpme extends Component {
     render(){
         return(
             <div>
                 
-                <iframe title="GoogleForm" src="https://docs.google.com/forms/d/e/1FAIpQLScEjm1Flwgz_J2CIM--sR7VCFdt037hefNclhHBqZHTqPkHxA/viewform?embedded=true"
+                <iframe title="Excelsheet" src="https://docs.google.com/spreadsheets/d/1RgFmQhMMaBBzC_4463myG2ZvLXrsJKi7bFmEMcTER7c/edit?hl=en&widget=false&hl=en&ui=2&chrome=false&rm=minimal#gid=733055832"
                 frameBorder="0" 
                 style = {{width : "1200px", height: "2000px", frameBorder:0 ,marginheight:"0" ,marginwidth:"0"}}><Button component={Link} to="/login"></Button></iframe>
 
@@ -17,4 +17,4 @@ export class bethetutor extends Component {
         );
     }
 }
-export default connect()(bethetutor);
+export default connect()(helpme);
