@@ -11,7 +11,7 @@ export class bethetutor extends Component {
                 
                 <iframe title="GoogleForm" src="https://docs.google.com/forms/d/e/1FAIpQLScEjm1Flwgz_J2CIM--sR7VCFdt037hefNclhHBqZHTqPkHxA/viewform?embedded=true"
                 frameBorder="0" 
-                style = {{width : "1200px", height: "2000px", frameBorder:0 ,marginheight:"0" ,marginwidth:"0"}}><Button component={Link} to="/login"></Button></iframe>
+                style = {{width : "1200px", height: "500px", frameBorder:0 ,marginheight:"0" ,marginwidth:"0"}}><Button component={Link} to="/login"></Button></iframe>
 
                 </div>
         );
