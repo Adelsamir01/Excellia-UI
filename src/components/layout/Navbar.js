@@ -38,9 +38,9 @@ class Navbar extends Component {
 			  <Button color="inherit" component={Link} to="/bethetutor">
 			  TUTOR ?
               </Button>
-        <Button color="inherit" component={Link} to="/courses">
+      /*   <Button color="inherit" component={Link} to="/courses">
 			  Our Courses
-              </Button>     
+              </Button>  */    
             </Fragment>
           ) : (
             <Fragment>
