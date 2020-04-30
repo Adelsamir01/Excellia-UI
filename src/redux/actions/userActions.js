@@ -63,6 +63,18 @@ export const getUserData = () => (dispatch) => {
     })
     .catch((err) => console.log(err));
 };
+export const getCourseData = () => (dispatch) => {
+  dispatch({ type: LOADING_USER });
+  axios
+    .get('/user')
+    .then((res) => {
+      dispatch({
+        type: SET_USER,
+        payload: res.data
+      });
+    })
+    .catch((err) => console.log(err));
+};
 
 export const uploadImage = (formData) => (dispatch) => {
   dispatch({ type: LOADING_USER });

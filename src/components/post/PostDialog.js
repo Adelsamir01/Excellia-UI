@@ -119,7 +119,7 @@ class PostDialog extends Component {
           <Typography variant="body1">{body}</Typography>
           <LikeButton postId={postId} />
           <span>{likeCount} likes</span>
-          <MyButton tip="comments">
+          <MyButton tip="comments" >
             <ChatIcon color="primary" />
           </MyButton>
           <span>{commentCount} comments</span>

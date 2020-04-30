@@ -9,11 +9,16 @@ import Notifications from './Notifications';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
+
+
+
 // Icons
 import HomeIcon from '@material-ui/icons/Home';
 
 class Navbar extends Component {
+  
   render() {
+    
     const { authenticated } = this.props;
     return (
       <AppBar style={{backgroundColor: '#b92b27'}}>
@@ -27,6 +32,15 @@ class Navbar extends Component {
                 </MyButton>
               </Link>
               <Notifications />
+			  <Button color="inherit" component={Link} to="/helpme">
+			  NEED HELP?
+              </Button>
+			  <Button color="inherit" component={Link} to="/bethetutor">
+			  TUTOR?
+              </Button>
+      {/*   <Button color="inherit" component={Link} to="/courses">
+			  Our Courses
+          </Button>  */}    
             </Fragment>
           ) : (
             <Fragment>
@@ -36,9 +50,9 @@ class Navbar extends Component {
               <Button color="inherit" component={Link} to="/login">
                 Login
               </Button>
-            {/*   <Button color="inherit" component={Link} to="/signup">
-                courses
-              </Button> */}
+              <Button color="inherit" component={Link} to="/bethetutor">
+                Tutor ?
+              </Button> 
             </Fragment>
           )}
         </Toolbar>

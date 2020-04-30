@@ -8,7 +8,7 @@ import jwtDecode from 'jwt-decode';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import { SET_AUTHENTICATED } from './redux/types';
-import { logoutUser, getUserData } from './redux/actions/userActions';
+import { logoutUser, getUserData, getCourseData } from './redux/actions/userActions';
 // Components
 import Navbar from './components/layout/Navbar';
 import themeObject from './util/theme';
@@ -19,6 +19,10 @@ import login from './pages/login';
 import signup from './pages/signup';
 import user from './pages/user';
 import course from './pages/course';
+import bethetutor from './pages/bethetutor';
+import coursesView from './pages/courses';
+import helpme from './pages/helpme';
+
 
 import axios from 'axios';
 
@@ -37,6 +41,7 @@ if (token) {
     store.dispatch({ type: SET_AUTHENTICATED });
     axios.defaults.headers.common['Authorization'] = token;
     store.dispatch(getUserData());
+    store.dispatch(getCourseData());
   }
 }
 
@@ -50,6 +55,9 @@ class App extends Component {
             <div className="container">
               <Switch>
                 <Route exact path="/" component={home} />
+                <Route exact path="/bethetutor" component={bethetutor} />
+                <Route exact path="/helpme" component={helpme} />
+                <Route exact path="/courses" component={coursesView} />
                 <AuthRoute exact path="/login" component={login} />
                 <AuthRoute exact path="/signup" component={signup} />
                 <Route exact path="/users/:handle" component={user} />

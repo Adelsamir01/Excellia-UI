@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import Post from '../components/post/Post';
-import StaticProfile from '../components/profile/StaticProfile';
+import CStaticProfile from '../components/course/CStaticProfile';
 import Grid from '@material-ui/core/Grid';
 
 import PostSkeleton from '../util/PostSkeleton';
@@ -39,7 +39,7 @@ class course extends Component {
     const postsMarkup = loading ? (
       <PostSkeleton />
     ) : posts === null ? (
-      <p>No posts from this user</p>
+      <p>No posts yet from this course</p>
     ) : !postIdParam ? (
       posts.map((post) => <Post key={post.postId} post={post} />)
     ) : (
@@ -59,7 +59,7 @@ class course extends Component {
           {this.state.profile === null ? (
             <ProfileSkeleton />
           ) : (
-            <StaticProfile profile={this.state.profile} />
+            <CStaticProfile profile={this.state.profile} />
           )}
         </Grid>
       </Grid>

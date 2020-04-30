@@ -16,7 +16,7 @@ const styles = (theme) => ({
   ...theme
 });
 
-const StaticProfile = (props) => {
+const CStaticProfile = (props) => {
   const {
     classes,
     profile: { handle, createdAt, imageUrl, bio, website, location }
@@ -32,11 +32,11 @@ const StaticProfile = (props) => {
         <div className="profile-details">
           <MuiLink
             component={Link}
-            to={`/users/${handle}`}
+            to={`/courses/${handle}`}
             color="primary"
             variant="h5"
           >
-            {handle}
+            @{handle}
           </MuiLink>
           <hr />
           {bio && <Typography variant="body2">{bio}</Typography>}
@@ -65,9 +65,9 @@ const StaticProfile = (props) => {
   );
 };
 
-StaticProfile.propTypes = {
+CStaticProfile.propTypes = {
   profile: PropTypes.object.isRequired,
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(StaticProfile);
+export default withStyles(styles)(CStaticProfile);

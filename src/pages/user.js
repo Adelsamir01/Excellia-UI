@@ -39,7 +39,7 @@ class user extends Component {
     const postsMarkup = loading ? (
       <PostSkeleton />
     ) : posts === null ? (
-      <p>No posts from this user</p>
+      <p>No posts yet from this user</p>
     ) : !postIdParam ? (
       posts.map((post) => <Post key={post.postId} post={post} />)
     ) : (
