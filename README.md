@@ -1,7 +1,7 @@
 
-## Excellia UI Code
+### Excellia UI Code
 
-## Currently, the CourseTest is the one which is  deployed to firebase because we are developing some functions in it. So, it's our final version deployed in the firebase. 
+## Currently, the CourseTest Branch is the one which is  deployed to firebase because we are developing some functions in it. So, it's our final version deployed in the firebase. 
 
 This is the UI code with the functions supporting the movement in the interface. 
 
