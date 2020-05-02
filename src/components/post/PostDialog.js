@@ -24,13 +24,19 @@ import { getPost, clearErrors } from '../../redux/actions/dataActions';
 const styles = (theme) => ({
   ...theme,
   profileImage: {
-    maxWidth: 200,
-    height: 200,
+    maxWidth: 100,
+    height: 100,
     borderRadius: '50%',
-    objectFit: 'cover'
+    objectFit: 'cover',
+    margin: '20px',
+    
   },
   dialogContent: {
-    padding: 20
+    padding: 20,
+  
+    
+    
+    
   },
   closeButton: {
     position: 'absolute',

@@ -22,12 +22,21 @@ const styles = {
   card: {
     position: 'relative',
     display: 'flex',
-    marginBottom: 20
+    marginBottom: 15,
+    
   },
   image: {
-    minWidth: 200
+    width: '100px',
+    height: '100px',
+    borderRadius: '50%',
+    padding : '50px',
+    margin: '20px',
+    float: 'left',
+    
   },
   content: {
+    
+    
     padding: 25,
     objectFit: 'cover'
   }
@@ -59,12 +68,13 @@ class Post extends Component {
       ) : null;
     return (
       <Card className={classes.card}>
+           
+        <CardContent className={classes.content}>
         <CardMedia
           image={userImage}
           title="Profile image"
           className={classes.image}
-        />
-        <CardContent className={classes.content}>
+        /> 
           <Typography
             variant="h5"
             component={Link}
@@ -74,7 +84,7 @@ class Post extends Component {
             {userHandle}
           </Typography>
           {deleteButton}
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body2" color="textSecondary" >
             {dayjs(createdAt).fromNow()}
           </Typography>
           <Typography variant="body1">{body}</Typography>
